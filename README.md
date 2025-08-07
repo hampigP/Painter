@@ -1,2 +1,2 @@
 # Painter
-[DEMO video：](https://youtu.be/O1JSEV-lcuc)
+[DEMO video](https://youtu.be/O1JSEV-lcuc)
