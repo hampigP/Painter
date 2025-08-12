@@ -132,8 +132,41 @@ y = int(yc + b * sin(theta));
 以滑鼠拖曳兩點決定： `cx = (x1 + x2)/2`, `cy = (y1 + y2)/2`, `a = |x2 - x1|/2`, `b = |y2 - y1|/2`
 
 ### Curve
-CGB
+`CGBezier(PVector p0, PVector p1, PVector p2, PVector p3)`
 
+以四點(起點 p0、控制點p1/p2、終點p3)畫平滑曲線
+
+三次貝茲公式：
+```
+B(t) = (1 - t)^3*p0 + 3 * (1 - t)^2 * t * p1 +3 * (1 - t) * t^2 * p2 + t^3 * p3, 0<= t <= 1
+```
+
+`t` 由 0 > 1 小步進，對應每個 t 算一個點並畫出
+
+在畫布點四下，收集四點後一次繪製
+
+### Pencil
+
+按住滑鼠拖曳時畫連續筆畫
+
+在 `mousePressed()` 記住 `prevX`, `prevY`
+```
+if(currentTool.equals("pencil")){
+  prevX = mouseX;
+  prevY = mouseY;
+}
+```
+在 `mouseDragged()` 不斷：用 `CGLine(prev, current)` 連起來 > 更新 `prev`
+```
+if(currentTool.equals("pencil")){
+  canvas.beginDraw();
+  CGLine(prevX, prevY, mouseX, mouseY, canvas, color(0));
+  canvas.endDraw();
+
+  prevX = mouseX;
+  prevY = mouseY;
+}
+```
 ## 清除畫布
 點選 `clear` 圖示範圍 > 呼叫清除畫布的函式
 ```
