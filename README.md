@@ -52,7 +52,7 @@ canvas.endDraw();
 ```
 image(canvas, 0, 0)
 ```
-## 工具切換
+## 4、工具切換
 
 `mousePressed()`：點選工具列 > 設定 `currentTool`
 
@@ -72,10 +72,21 @@ void mousePressed(){
 `mouseY <= 40` 代表滑鼠在畫面上方40px內點擊
 
 `mouseX >= 10 && mouseX <30` 是工具所在範圍
-## 3、演算法
+
+
+## 5、演算法
 ### Line
 `CGLine(float x1, float y1, float x2, float y2)`
 
+從`(x1, y1)` 到 `(x2, y2)` 以均勻步進畫出一條線，用像素點近似。
+
+找出x與y兩方向的位移：`dx = x2 - x1`, `dy = y2 - y1`
+
+取較大位移的絕對值當作步數：`steps = int(max(abs(dx), abs(dy)))`
+
+每一步要前進多少：`xInc = dx / steps, yInc = dy / steps`
+
+從 `(x,y) = (x1, y1)` 開始，重複 `steps` 次： `x+=xInc; y+=yInc`，每一步畫一個像素
 ## 清除畫布
 點選 `clear` 圖示範圍 > 呼叫清除畫布的函式
 ```
