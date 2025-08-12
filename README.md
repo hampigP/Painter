@@ -101,7 +101,7 @@ void mousePressed(){
 
 每得到一組`(x,y)`，用對稱一次畫8個點：
 ```
-(<sup>+</sup><sub>-</sub>)
+(<sup> + </sup> <sub> - </sub>)
 
 ```
 ## 清除畫布
