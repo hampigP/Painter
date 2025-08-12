@@ -52,13 +52,32 @@ canvas.endDraw();
 ```
 image(canvas, 0, 0)
 ```
+## 工具切換
 
+`mousePressed()`：點選工具列 > 設定 `currentTool`
+
+EX：
+```
+void mousePressed(){
+  if(mouseY <= 40){
+    if(mouseX >= 10 && mouseX <30){
+      currentTool = "line";
+    }else if(){
+      ...
+  }
+  return;
+}
+```
+
+`mouseY <= 40` 代表滑鼠在畫面上方40px內點擊
+
+`mouseX >= 10 && mouseX <30` 是工具所在範圍
 ## 3、演算法
 ### Line
 `CGLine(float x1, float y1, float x2, float y2)`
 
 ## 清除畫布
-點選 clear 圖示範圍 > 呼叫清除畫布的函式
+點選 `clear` 圖示範圍 > 呼叫清除畫布的函式
 ```
 void clearCanvas(){
   canvas.beginDraw();
