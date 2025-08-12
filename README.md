@@ -10,6 +10,7 @@
 ## 2、顯示上方工具列
 
 宣告圖片變數，分別為：`PImage line, clear, eraser, pencil, curve, circle, square, oval`
+
 在 setup()中讀入圖片。
 ```
 line = loadImage("line.png");
@@ -55,3 +56,14 @@ image(canvas, 0, 0)
 ## 3、演算法
 ### Line
 `CGLine(float x1, float y1, float x2, float y2)`
+
+## 清除畫布
+點選 clear 圖示範圍 > 呼叫清除畫布的函式
+```
+void clearCanvas(){
+  canvas.beginDraw();
+  canvas.background(255);
+  canvas.endDraw();
+}
+```
+
