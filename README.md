@@ -129,7 +129,11 @@ void mousePressed(){
 x = int(xc + a * cos(theta));
 y = int(yc + b * sin(theta));
 ```
-以滑鼠拖曳兩點決定： cx = (x1 + x2)/2
+以滑鼠拖曳兩點決定： `cx = (x1 + x2)/2`, `cy = (y1 + y2)/2`, `a = |x2 - x1|/2`, `b = |y2 - y1|/2`
+
+### Curve
+CGB
+
 ## 清除畫布
 點選 `clear` 圖示範圍 > 呼叫清除畫布的函式
 ```
