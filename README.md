@@ -11,7 +11,7 @@
 
 宣告圖片變數，分別為：`line, clear, eraser, pencil, curve, circle, square, oval`
 
-在 setup()中載入圖片，EX： line = loadImage("line.png");
+在 setup()中載入圖片。EX： line = loadImage("line.png");
 
-設定圖片位置，
+設定圖片位置，位置是自己抓的。EX：image(line, 10, 10, 20, 20); > image(x座標,y座標, 寬, 長);
 
