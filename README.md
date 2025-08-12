@@ -105,6 +105,7 @@ void mousePressed(){
 ```
 
 ### Square
+`CGRect(float x1, float y1, float x2, float y2)`
 
 用拖曳的對角點拉出正方形。
 
@@ -112,7 +113,23 @@ void mousePressed(){
 
 邊長取 `size = min(abs(dx), abs(dy))`，確保四邊相等
 
-根據拖曳方向(左/右、)
+根據拖曳方向(左/右、上/下)決定另一角：`xRight = x1 + sign(dx)*size`, `yBottom = y1 + sign(dy)*size`
+
+用 `CGLine` 依序畫四個邊
+
+### Oval
+`CGOval(int xc, int yc, int a, int b)`
+
+以中心與兩軸半徑畫出橢圓的邊界
+
+中心`(xc, yc)`、水平半徑 `a` 、垂直半徑 `b`
+
+參數式：
+```
+x = int(xc + a * cos(theta));
+y = int(yc + b * sin(theta));
+```
+以滑鼠拖曳兩點決定： cx = (x1 + x2)/2
 ## 清除畫布
 點選 `clear` 圖示範圍 > 呼叫清除畫布的函式
 ```
