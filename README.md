@@ -87,6 +87,21 @@ void mousePressed(){
 每一步要前進多少：`xInc = dx / steps, yInc = dy / steps`
 
 從 `(x,y) = (x1, y1)` 開始，重複 `steps` 次： `x+=xInc; y+=yInc`，每一步畫一個像素
+
+### Circle
+`CGCircle(int xc, int yc, int r)`
+
+以整數運算和`八向對稱`畫出圓的邊界。
+
+以圓心 `(xc, yc)`、半徑 `r`，從最上方開始：`(x = 0, y = r)`
+
+維護判斷參數 `d = 1 - r`
+
+每回合 `x++`， 若 `d < 0`：只移動 x，否則 `y--` (往內收)
+
+每得到一組`(x,y)`，用對稱一次畫8個點：
+```
+(<sup>+</sup><sub>-</sub>)
 ## 清除畫布
 點選 `clear` 圖示範圍 > 呼叫清除畫布的函式
 ```
