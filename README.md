@@ -11,8 +11,17 @@
 
 宣告圖片變數，分別為：`PImage line, clear, eraser, pencil, curve, circle, square, oval`
 
-在 setup()中讀入圖片。EX： line = loadImage("line.png");
-
+在 setup()中讀入圖片。
+```
+line = loadImage("line.png");
+clear = loadImage("clear.png");
+eraser = loadImage("eraser.png");
+pencil = loadImage("pencil.png");
+curve = loadImage("curve.png");
+circle = loadImage("circle.png");
+square = loadImage("square.png");
+oval = loadImage("oval.png");
+```
 設定圖片位置，位置是自己抓的。EX：image(line, 10, 10, 20, 20); > image(圖片, x座標, y座標, 寬, 長);
 
 ## 3、做可以記住圖案的畫布(PGraphics)
@@ -30,7 +39,7 @@ canvas.endDraw();
 }
 ```
 
-在 draw()每幀把它貼回來：
+在 `draw()`每幀把它貼回來：
 ```
 image(canvas, 0, 0)
 ```
