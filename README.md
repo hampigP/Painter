@@ -30,6 +30,11 @@ canvas.endDraw();
 }
 ```
 
+在 draw()每幀把它貼回來：
+```
+image(canvas, 0, 0)
+```
+
 ## 3、演算法
 ### Line
 `CGLine(float x1, float y1, float x2, float y2)`
