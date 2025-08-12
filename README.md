@@ -167,7 +167,15 @@ if(currentTool.equals("pencil")){
   prevY = mouseY;
 }
 ```
-## 清除畫布
+
+### Eraser
+
+擦掉已經畫的內容
+
+本質是「白色的畫筆」，所以是沿用pencil的拖曳連線，只是畫筆顏色更改為背景色(白色)。
+### Clear
+一鍵清空所有已經畫的內容
+
 點選 `clear` 圖示範圍 > 呼叫清除畫布的函式
 ```
 void clearCanvas(){
