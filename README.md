@@ -10,7 +10,6 @@
 ## 2、顯示上方工具列
 
 宣告圖片變數，分別為：`PImage line, clear, eraser, pencil, curve, circle, square, oval`
-
 在 setup()中讀入圖片。
 ```
 line = loadImage("line.png");
@@ -22,8 +21,17 @@ circle = loadImage("circle.png");
 square = loadImage("square.png");
 oval = loadImage("oval.png");
 ```
-設定圖片位置，位置是自己抓的。EX：image(line, 10, 10, 20, 20); > image(圖片, x座標, y座標, 寬, 長);
-
+設定圖片位置，位置是自己抓的。image(圖片, x座標, y座標, 寬, 長);
+```
+image(line, 10, 10, 20, 20);
+image(pencil, 155, 10, 20, 20);
+image(clear, 770, 10, 20, 20);
+image(eraser, 180, 10, 20, 20);
+image(curve, 130, 10, 20, 20);
+image(circle, 40, 10, 20, 20);
+image(square, 70, 10, 20, 20);
+image(oval, 100, 10, 20, 20);
+```
 ## 3、做可以記住圖案的畫布(PGraphics)
 
 如果只在主畫面畫，`draw()` 每幀重畫會把舊東西蓋掉，所以另外做一塊畫布儲存先前的畫作。
